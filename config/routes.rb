@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+  resources :microposts
+  resources :users
+  get "/" => "microposts#new"
 end
